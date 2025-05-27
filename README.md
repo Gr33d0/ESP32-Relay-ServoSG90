@@ -24,3 +24,4 @@ Servo:
 Brown - GND (External battery)
 Red - COM (Relay)
 Orange - Pin 16(Board)
+![image](https://github.com/user-attachments/assets/5fb4b790-6f6d-49be-9592-cdb66a7e0a54)
