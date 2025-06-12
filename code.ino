@@ -17,10 +17,11 @@ void loop() {
 
   // Liga o relé
   digitalWrite(RELAY_PIN, HIGH);
-
+   delay(500);
 
   // Verifica o estado atual
   int estado = digitalRead(RELAY_PIN);
+
   Serial.print("Estado do relé: ");
   Serial.println(estado == HIGH ? "LIGADO" : "DESLIGADO");
   meuServo.write(0);    // Vai para 0 graus
@@ -29,7 +30,8 @@ void loop() {
   delay(1000);
   meuServo.write(180);  // Vai para 180 graus
   delay(1000);
-  // Desliga o relé
+    meuServo.write(0);  // Vai para 180 graus
+  delay(1000);
   digitalWrite(RELAY_PIN, LOW);
  delay(1000);
 
@@ -37,4 +39,5 @@ void loop() {
   estado = digitalRead(RELAY_PIN);
   Serial.print("Estado do relé: ");
   Serial.println(estado == HIGH ? "LIGADO" : "DESLIGADO");
+  delay(1000);
 }
